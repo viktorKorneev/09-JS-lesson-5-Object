@@ -141,7 +141,7 @@ let car = {
 return car;
 }
 function displayCar(car) {
-    console.log(`Your new car is a ${car.years} ${car.make} ${car.model}`);
+    console.log(`Your new car is a ${car.years} ${car.make} ${car.model} ${car.passengers} ${car.convertible}`);
     
 }
 
