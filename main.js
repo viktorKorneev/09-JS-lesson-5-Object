@@ -1,12 +1,12 @@
-// let chevy = {
-//     make: "Chevy",
-//     model: "Bel Air",
-//     year: "1957",
-//     color: "red",
-//     passengers: "2",
-//     convertible: false,
-//     mileage: 1021
-// };
+let chevy = {
+    make: "Chevy",
+    model: "Bel Air",
+    year: "1957",
+    color: "red",
+    passengers: "2",
+    convertible: false,
+    mileage: 1021
+};
 
 // chevy.needsWashing = true
 // console.log(chevy);
@@ -20,13 +20,20 @@
 // }
 
 
-// let dog = {
-//     name: "Fido",
-//     weight: 20.2,
-//     age: 4,
-//     breed: "mixed",
-//     activity: "fetch balls"
-// }
+let fido = {
+    name: "Fido",
+    weight: 20.2,
+    age: 4,
+    breed: "mixed",
+    activity: "fetch balls"
+}
+loseWeight(fido, 10)
+function loseWeight (dog, amount) {
+    dog.weight = dog.weight - amount;
+
+}
+alert(`${fido.name} now weighs ${fido.weight}`);
+
 
 // let bark;
 // if(dog.weight > 20) {
@@ -44,31 +51,31 @@
 
 
 
-let taxi = {
-    make: "Webville Motors",
-    model: "Taxi",
-    year: 1955,
-    color: "yellow",
-    passengers: 4,
-    convertible: false,
-    mileage: 281341
-}
+// let taxi = {
+//     make: "Webville Motors",
+//     model: "Taxi",
+//     year: 1955,
+//     color: "yellow",
+//     passengers: 4,
+//     convertible: false,
+//     mileage: 281341
+// }
 
-function prequal (car) {
-    if (car.mileage > 10000) {
-        return false
-    } else if (car.year > 1960) {
-        return false
-    }
-    return true
-}
+// function prequal (car) {
+//     if (car.mileage > 10000) {
+//         return false
+//     } else if (car.year > 1960) {
+//         return false
+//     }
+//     return true
+// }
 
-let worthALook = prequal(taxi);
+// let worthALook = prequal(taxi);
 
-if(worthALook) {
-    console.log(`You gotta check out this ${taxi.make} ${taxi.model}`);
-    } else {
-        console.log(`You should really pass on the ${taxi.make} ${taxi.model}`);
+// if(worthALook) {
+//     console.log(`You gotta check out this ${taxi.make} ${taxi.model}`);
+//     } else {
+//         console.log(`You should really pass on the ${taxi.make} ${taxi.model}`);
         
-    } 
+//     } 
 
