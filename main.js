@@ -83,35 +83,67 @@
 
 
 
-function getSecret(file, secretPassword) {
-  file.opened = file.opened + 1;
-  if(secretPassword == file.password){
-    return file.contents
-  }  else {
-    return "Invalied password! No secret for you.";
-  }
-}
+// function getSecret(file, secretPassword) {
+//   file.opened = file.opened + 1;
+//   if(secretPassword == file.password){
+//     return file.contents
+//   }  else {
+//     return "Invalied password! No secret for you.";
+//   }
+// }
 
-function setSecret(file, secretPassword, secret) {
-    if (secretPassword == file.password) {
-        file.opened = 0;
-        file.contents = secret;
-    }
-}
+// function setSecret(file, secretPassword, secret) {
+//     if (secretPassword == file.password) {
+//         file.opened = 0;
+//         file.contents = secret;
+//     }
+// }
 
 
-let superSecretFile = {
-    level: "classfied",
-    opened: 0,
-    password: 2,
-    contents: "Dr. Evel's next meeting is in Detroit."
+// let superSecretFile = {
+//     level: "classfied",
+//     opened: 0,
+//     password: 2,
+//     contents: "Dr. Evel's next meeting is in Detroit."
+// };
+
+// let secret = getSecret(superSecretFile, 2)
+// console.log(secret);
+
+// setSecret = (superSecretFile, 2, "Dr. Evel's next meeting is in Philadelphia.")
+// secret = getSecret(superSecretFile, 2)
+// console.log(secret);
+
+
+function makeCar () {
+    let makes = ["Chevy", "GM", "Fiat", "Webville Motors", "Tucker" ];
+    let models = ["Cadillac", "500", "Bel-Air", "Taxi", "Torpedo"];
+    let years = [1955, 1957, 1948, 1954, 1961 ];
+    let colors = ["red", "blue", "tan", "yellow", "white"];
+    let convertible = [true, false];
+
+    let rand1 = Math.floor(Math.random() * makes.length);
+    let rand2 = Math.floor(Math.random() * models.length);
+    let rand3 = Math.floor(Math.random() * years.length);
+    let rand4 = Math.floor(Math.random() * colors.length);
+    let rand5 = Math.floor(Math.random() * 5) + 1;
+    let rand6 = Math.floor(Math.random() * 2);
+
+
+let car = {
+    make: makes[rand1],
+    model: models[rand2],
+    years: years[rand3],
+    color: colors[rand4],
+    passengers: rand5,
+    convertible: convertible[rand6]
 };
+return car;
+}
+function displayCar(car) {
+    console.log(`Your new car is a ${car.years} ${car.make} ${car.model}`);
+    
+}
 
-let secret = getSecret(superSecretFile, 2)
-console.log(secret);
-
-setSecret = (superSecretFile, 2, "Dr. Evel's next meeting is in Philadelphia.")
-secret = getSecret(superSecretFile, 2)
-console.log(secret);
-
-
+let carToSell = makeCar();
+displayCar(carToSell)
