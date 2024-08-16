@@ -1,12 +1,12 @@
-let chevy = {
-    make: "Chevy",
-    model: "Bel Air",
-    year: "1957",
-    color: "red",
-    passengers: "2",
-    convertible: false,
-    mileage: 1021
-};
+// let chevy = {
+//     make: "Chevy",
+//     model: "Bel Air",
+//     year: "1957",
+//     color: "red",
+//     passengers: "2",
+//     convertible: false,
+//     mileage: 1021
+// };
 
 // chevy.needsWashing = true
 // console.log(chevy);
@@ -20,19 +20,19 @@ let chevy = {
 // }
 
 
-let fido = {
-    name: "Fido",
-    weight: 20.2,
-    age: 4,
-    breed: "mixed",
-    activity: "fetch balls"
-}
-loseWeight(fido, 10)
-function loseWeight (dog, amount) {
-    dog.weight = dog.weight - amount;
+// let fido = {
+//     name: "Fido",
+//     weight: 20.2,
+//     age: 4,
+//     breed: "mixed",
+//     activity: "fetch balls"
+// }
+// loseWeight(fido, 10)
+// function loseWeight (dog, amount) {
+//     dog.weight = dog.weight - amount;
 
-}
-alert(`${fido.name} now weighs ${fido.weight}`);
+// }
+// alert(`${fido.name} now weighs ${fido.weight}`);
 
 
 // let bark;
@@ -78,4 +78,40 @@ alert(`${fido.name} now weighs ${fido.weight}`);
 //         console.log(`You should really pass on the ${taxi.make} ${taxi.model}`);
         
 //     } 
+
+
+
+
+
+function getSecret(file, secretPassword) {
+  file.opened = file.opened + 1;
+  if(secretPassword == file.password){
+    return file.contents
+  }  else {
+    return "Invalied password! No secret for you.";
+  }
+}
+
+function setSecret(file, secretPassword, secret) {
+    if (secretPassword == file.password) {
+        file.opened = 0;
+        file.contents = secret;
+    }
+}
+
+
+let superSecretFile = {
+    level: "classfied",
+    opened: 0,
+    password: 2,
+    contents: "Dr. Evel's next meeting is in Detroit."
+};
+
+let secret = getSecret(superSecretFile, 2)
+console.log(secret);
+
+setSecret = (superSecretFile, 2, "Dr. Evel's next meeting is in Philadelphia.")
+secret = getSecret(superSecretFile, 2)
+console.log(secret);
+
 
