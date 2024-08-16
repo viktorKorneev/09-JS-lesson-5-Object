@@ -37,3 +37,8 @@ if(dog.weight > 20) {
 
 let speak = `${dog.name} says ${bark} when he wants to ${dog.activity}`
 console.log(speak);
+
+dog.fidoYears = 35;
+delete dog.fidoYears
+console.log(dog);
+
