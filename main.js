@@ -190,94 +190,99 @@
 // song.play()
 // song.pause()
 
-function driveCar() {
-  if (this.started) {
-    if(this.fuel > 0){
-      alert(`${this.make} ${this.model} goes zoom zoom!`);
-      this.fuel -= 1
+// function driveCar() {
+//   if (this.started) {
+//     if(this.fuel > 0){
+//       alert(`${this.make} ${this.model} goes zoom zoom!`);
+//       this.fuel -= 1
     
     
-  } else {
-    alert("Uh oh, out of fuel");
-    this.stop()
-  }
-} else {
-  alert("You need to start the engin first.")
+//   } else {
+//     alert("Uh oh, out of fuel");
+//     this.stop()
+//   }
+// } else {
+//   alert("You need to start the engin first.")
   
-}}
+// }}
 
-function startCar() {
-  if(this.fuel > 0){
-    this.started = true;
-  } else {
-    alert("The car is on empty, fill up before starting!")
-  }
+// function startCar() {
+//   if(this.fuel > 0){
+//     this.started = true;
+//   } else {
+//     alert("The car is on empty, fill up before starting!")
+//   }
   
-}
+// }
 
-function stopCar() {
-  this.started = false;
-}
+// function stopCar() {
+//   this.started = false;
+// }
 
-let taxi = {
-  make: "Webville Motors",
-  model: "Taxi",
-  year: 1955,
-  color: "yellow",
-  passengers: 4,
-  convertible: false,
-  mileage: 281341,
-  started: false,
-  start: startCar,
-  stop: stopCar,
-  drive: driveCar,
-};
+// let taxi = {
+//   make: "Webville Motors",
+//   model: "Taxi",
+//   year: 1955,
+//   color: "yellow",
+//   passengers: 4,
+//   convertible: false,
+//   mileage: 281341,
+//   started: false,
+//   start: startCar,
+//   stop: stopCar,
+//   drive: driveCar,
+// };
 
-let chevy = {
-  make: "Chevy",
-  model: "Bel Air",
-  year: "1957",
-  color: "red",
-  passengers: "2",
-  convertible: false,
-  mileage: 1021,
-  started: false,
-  start: startCar,
-  stop: stopCar,
-  drive: driveCar,
-};
+// let chevy = {
+//   make: "Chevy",
+//   model: "Bel Air",
+//   year: "1957",
+//   color: "red",
+//   passengers: "2",
+//   convertible: false,
+//   mileage: 1021,
+//   started: false,
+//   start: startCar,
+//   stop: stopCar,
+//   drive: driveCar,
+// };
 
-function addFuelCar(amount){
-  this.fuel += amount
-}
+// function addFuelCar(amount){
+//   this.fuel += amount
+// }
 
-let fiat = {
-  make: "Fiat",
-  model: "Bel Air",
-  year: "1957",
-  color: "Medium Blue",
-  passengers: "2",
-  convertible: false,
-  mileage: 1021,
-  started: false,
-  start: startCar,
-  stop: stopCar,
-  drive: driveCar,
-  fuel: 0,
-  addFuel: addFuelCar
-};
+// let fiat = {
+//   make: "Fiat",
+//   model: "Bel Air",
+//   year: "1957",
+//   color: "Medium Blue",
+//   passengers: "2",
+//   convertible: false,
+//   mileage: 1021,
+//   started: false,
+//   start: startCar,
+//   stop: stopCar,
+//   drive: driveCar,
+//   fuel: 0,
+//   addFuel: addFuelCar
+// };
 
-// taxi.start();
-// taxi.drive();
-// taxi.stop();
-// chevy.start();
-// chevy.drive();
-// chevy.stop();
-fiat.start();
-fiat.drive();
-fiat.addFuel(1);
-fiat.start();
-fiat.drive();
-fiat.drive();
-fiat.drive();
-fiat.stop();
+// // taxi.start();
+// // taxi.drive();
+// // taxi.stop();
+// // chevy.start();
+// // chevy.drive();
+// // chevy.stop();
+// fiat.start();
+// fiat.drive();
+// fiat.addFuel(1);
+// fiat.start();
+// fiat.drive();
+// fiat.drive();
+// fiat.drive();
+// fiat.stop();
+
+let access = document.getElementById("code9");
+let code = access.innerHTML
+code += " midnight"
+alert(code)
