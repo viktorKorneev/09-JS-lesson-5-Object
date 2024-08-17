@@ -192,11 +192,19 @@
 
 function driveCar() {
   if (this.started) {
-    alert(`${this.make} ${this.model} goes zoom zoom!`);
+    if(this.fuel > 0){
+      alert(`${this.make} ${this.model} goes zoom zoom!`);
+      this.fuel -= 1
+    
+    
   } else {
-    alert("You need to start the engine first.");
+    alert("Uh oh, out of fuel");
+    this.stop()
   }
-}
+} else {
+  alert("You need to start the engin first.")
+  
+}}
 
 function startCar() {
   this.started = true;
@@ -234,6 +242,10 @@ let chevy = {
   drive: driveCar,
 };
 
+function addFuelCar(amount){
+  this.fuel += amount
+}
+
 let fiat = {
   make: "Fiat",
   model: "Bel Air",
@@ -246,14 +258,21 @@ let fiat = {
   start: startCar,
   stop: stopCar,
   drive: driveCar,
+  fuel: 0,
+  addFuel: addFuelCar
 };
 
-taxi.start();
-taxi.drive();
-taxi.stop();
-chevy.start();
-chevy.drive();
-chevy.stop();
+// taxi.start();
+// taxi.drive();
+// taxi.stop();
+// chevy.start();
+// chevy.drive();
+// chevy.stop();
 fiat.start();
+fiat.drive();
+fiat.addFuel(2);
+fiat.start();
+fiat.drive();
+fiat.drive();
 fiat.drive();
 fiat.stop();
