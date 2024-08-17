@@ -158,8 +158,19 @@ let fiat = {
     passengers: "2",
     convertible: false,
     mileage: 1021,
+    started: false,
+    start: function () {
+        this.started = true
+    },
+    stop: function () {
+        this.started = false
+    },
     drive: function () {
-        console.log("Zoom zoom!");
+        if (this.started) {
+            alert("Zoom zoom!")
+        } else {
+            alert("You need to start the engine first.")
+        }
         
     }
 }
