@@ -207,7 +207,12 @@ function driveCar() {
 }}
 
 function startCar() {
-  this.started = true;
+  if(this.fuel > 0){
+    this.started = true;
+  } else {
+    alert("The car is on empty, fill up before starting!")
+  }
+  
 }
 
 function stopCar() {
@@ -270,7 +275,7 @@ let fiat = {
 // chevy.stop();
 fiat.start();
 fiat.drive();
-fiat.addFuel(2);
+fiat.addFuel(1);
 fiat.start();
 fiat.drive();
 fiat.drive();
