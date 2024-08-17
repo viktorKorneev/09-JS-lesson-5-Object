@@ -19,7 +19,6 @@
 //     addPersonToCar()
 // }
 
-
 // let fido = {
 //     name: "Fido",
 //     weight: 20.2,
@@ -34,7 +33,6 @@
 // }
 // alert(`${fido.name} now weighs ${fido.weight}`);
 
-
 // let bark;
 // if(dog.weight > 20) {
 //     bark = "WOOF WOOF"
@@ -48,8 +46,6 @@
 // dog.fidoYears = 35;
 // delete dog.fidoYears
 // console.log(dog);
-
-
 
 // let taxi = {
 //     make: "Webville Motors",
@@ -76,12 +72,8 @@
 //     console.log(`You gotta check out this ${taxi.make} ${taxi.model}`);
 //     } else {
 //         console.log(`You should really pass on the ${taxi.make} ${taxi.model}`);
-        
-//     } 
 
-
-
-
+//     }
 
 // function getSecret(file, secretPassword) {
 //   file.opened = file.opened + 1;
@@ -99,7 +91,6 @@
 //     }
 // }
 
-
 // let superSecretFile = {
 //     level: "classfied",
 //     opened: 0,
@@ -113,7 +104,6 @@
 // setSecret = (superSecretFile, 2, "Dr. Evel's next meeting is in Philadelphia.")
 // secret = getSecret(superSecretFile, 2)
 // console.log(secret);
-
 
 // function makeCar () {
 //     let makes = ["Chevy", "GM", "Fiat", "Webville Motors", "Tucker" ];
@@ -129,7 +119,6 @@
 //     let rand5 = Math.floor(Math.random() * 5) + 1;
 //     let rand6 = Math.floor(Math.random() * 2);
 
-
 // let car = {
 //     make: makes[rand1],
 //     model: models[rand2],
@@ -143,12 +132,11 @@
 // }
 // function displayCar(car) {
 //     console.log(`Your new car is a ${car.years} ${car.make} ${car.model} ${car.passengers} ${car.convertible}`);
-    
+
 // }
 
 // let carToSell = makeCar();
 // displayCar(carToSell)
-
 
 // let fiat = {
 //     make: "Fiat",
@@ -166,12 +154,12 @@
 //         this.started = false
 //     },
 //     drive: function () {
-//         if (this.started) { 
+//         if (this.started) {
 //             alert("Zoom zoom!")
 //         } else {
 //             alert("You need to start the engine first.")
 //         }
-        
+
 //     }
 // }
 // fiat.drive();
@@ -179,30 +167,93 @@
 // fiat.drive();
 // fiat.stop();
 
+// let song = {
+//     name: "Walk This Way",
+//     artist: "Run-D.M.C.",
+//     minutes: 4,
+//     seconds: 3,
+//     genre: "80s",
+//     playing: false,
+//     play: function () {
+//         if (!this.playing) {
+//             this.playing = true
+//             console.log(`Playing ${this.name} by ${this.artist}`);
 
+//         }
+//     },
+//     pause: function () {
+//         if (this.playing) {
+//             this.playing = false
+//         }
+//     }
+// }
+// song.play()
+// song.pause()
 
-
-
-
-let song = {
-    name: "Walk This Way",
-    artist: "Run-D.M.C.",
-    minutes: 4,
-    seconds: 3,
-    genre: "80s",
-    playing: false,
-    play: function () {
-        if (!this.playing) {
-            this.playing = true
-            console.log(`Playing ${this.name} by ${this.artist}`);
-            
-        }
-    },
-    pause: function () {
-        if (this.playing) {
-            this.playing = false
-        }
-    }
+function driveCar() {
+  if (this.started) {
+    alert(`${this.make} ${this.model} goes zoom zoom!`);
+  } else {
+    alert("You need to start the engine first.");
+  }
 }
-song.play()
-song.pause()
+
+function startCar() {
+  this.started = true;
+}
+
+function stopCar() {
+  this.started = false;
+}
+
+let taxi = {
+  make: "Webville Motors",
+  model: "Taxi",
+  year: 1955,
+  color: "yellow",
+  passengers: 4,
+  convertible: false,
+  mileage: 281341,
+  started: false,
+  start: startCar,
+  stop: stopCar,
+  drive: driveCar,
+};
+
+let chevy = {
+  make: "Chevy",
+  model: "Bel Air",
+  year: "1957",
+  color: "red",
+  passengers: "2",
+  convertible: false,
+  mileage: 1021,
+  started: false,
+  start: startCar,
+  stop: stopCar,
+  drive: driveCar,
+};
+
+let fiat = {
+  make: "Fiat",
+  model: "Bel Air",
+  year: "1957",
+  color: "Medium Blue",
+  passengers: "2",
+  convertible: false,
+  mileage: 1021,
+  started: false,
+  start: startCar,
+  stop: stopCar,
+  drive: driveCar,
+};
+
+taxi.start();
+taxi.drive();
+taxi.stop();
+chevy.start();
+chevy.drive();
+chevy.stop();
+fiat.start();
+fiat.drive();
+fiat.stop();
